@@ -1,0 +1,17 @@
+#como sabetr si un numro es par o inpar
+#pregunta = input('agrga un numero y te dire si es par o inpar')
+#pregunta += '\r\n escribe "cerrar" para salir de la app \r\n'
+pregunta = True
+
+while True :
+    entrada = input('agrega un numero y (o dime cerrar) te dire si es par o inpar \r\n').strip()
+    if entrada.lower()  =="cerrar":
+         break
+    try:
+        numero = int(entrada)
+        if numero %2 ==0:
+            print(f'es par')
+        else:
+            print(f'tu numero es impar')
+    except ValueError:
+        print('ingrese un numero vaLIDO')
