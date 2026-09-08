@@ -1,0 +1,7 @@
+superheroes=  ['spiderman','irom man','pantera negra']
+for superheroes in superheroes : 
+    if superheroes == 'spiderman' :
+        print('eres mi superheroe favorito')
+    else:
+        print("te falta calle")
+    
