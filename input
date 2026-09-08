@@ -1,0 +1,22 @@
+#nombre = input('ingresa tu nombre por fa \r\n')#sato de linea \n  y retorno \r
+#print(f'el participante tine el nombre de {nombre}')
+
+#edad = input('ingresa tu edad por fa \r\n')#sato de linea \n  y retorno \r
+#edad=int(edad)#el se ingresa como texto entonces tenemos que estar pendiente para cambiarlo 
+#print(f'el participante tine el nombre de {nombre} y su edad es {edad} anios')
+      
+#if edad>=18 : 
+    #print('eres mayor a 18')
+#else:
+   # print(f'tienes {edad} anios y no puedes votar aguante pueblo')
+    
+#en caso que el usuario le de chiripiorca y ingrese algo que no es en ves de una edad o nombre 
+edad = input ('cual es tu edad?')
+try:
+    edad=int(edad)
+    if edad>=18:
+        print(f'tines {edad} anios y puedes votar por ser mayor de edad')
+    else:
+        print('aun no tienes edad para votar')
+except ValueError:
+    print('por fa ingresa una edad valida ')
