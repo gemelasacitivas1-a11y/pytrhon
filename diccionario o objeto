@@ -1,0 +1,16 @@
+#diccionario
+cancion = {
+    'artistas' : 'ricardo arjona',
+    'nombre' : 'el problema'
+}
+
+print(cancion ['artistas'])
+artistas = cancion ['artistas']
+print(artistas)
+#agregaR UNA LLAVE ADICIONAL
+cancion  ['playlis_id'] = 'Romanticas'
+print(cancion)
+
+#eliminar una llave de mi diccionario
+del cancion['playlis_id']
+print(cancion)
