@@ -1,0 +1,13 @@
+#condiconales and y or 
+#ANDE REVISA AMBOS CONDICIONALES SEAN VERDADEROS
+#OR REVISA QUE AL MENOS UNO SE CUMOKA 
+
+acceso_usuario= False
+acceso_admin= False 
+if acceso_usuario and acceso_admin :
+    print('ACCESO TOTAL')
+elif acceso_usuario :
+    print('el usuario esta autenticado')
+else:
+    print('el usuario no esta autenticado')
+    
