@@ -1,0 +1,40 @@
+playlist = { 
+           'nombre': '', 
+            'canciones':[]
+            }
+playlist['canciones'] = []#crea un diccionario
+def app():
+    agregar_playlist= True #cambio : por =
+    while agregar_playlist:
+        nombre_playlist = input('como desear nombrar tu playlist')
+        
+        if nombre_playlist:
+            playlist['nombre'] = nombre_playlist
+            agregar_playlist = False
+            agregar_canciones()
+            mostrar_resumen()
+def agregar_canciones():
+    print('Agregar canciones  a la playlist',playlist['nombre'])
+    while True:
+        cancion = input('ingrasa el nombre de la cancion o x pa irte:')
+        if cancion.lower()== 'x': # se le pusieron parentesis a lower
+            break
+        
+        playlist['canciones'].append(cancion)
+        print('Cancion agrgada',cancion)
+    print('playlist completa')
+    print(playlist)
+    
+def mostrar_resumen():
+    print('playlist', playlist['nombre'])
+    print('canciones de la playlist\r\n')
+    
+    for cancion in playlist['canciones']:
+        print(cancion)
+
+
+
+
+
+
+app()
