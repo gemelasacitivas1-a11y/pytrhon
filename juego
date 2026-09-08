@@ -1,0 +1,8 @@
+#como sabetr si un numro es par o inpar
+numero = input('agrga un numero y te dire si es par o inpar')
+numero = int(numero)
+
+if numero  %2 ==0:
+    print('es par')
+else:
+    print(f'tu numero es impar')
