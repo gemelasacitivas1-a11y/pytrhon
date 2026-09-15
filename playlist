@@ -38,3 +38,38 @@ def mostrar_resumen():
 
 
 app()
+
+
+
+
+curso = {}
+curso['alumnos'] = []
+def escuela():
+    agregar_curso = True
+    while agregar_curso:
+        nombre_curso = input('Cual es el nombre del curso')
+        if nombre_curso:
+            curso['nombre'] = nombre_curso
+            agregar_curso = False
+            agregar_alumnos()
+            mostrar_resumen()
+def agregar_alumnos():
+    while True:
+        nombre = input('Ingresa nombres de los alumnos o q para salir:')
+        if nombre.lower() == 'q': 
+            break
+        curso['alumnos'].append(nombre)
+    print('lista del curso terminado')
+    
+def mostrar_resumen():
+    print('Curso', curso['nombre'])
+    print('alumnos\r\n')
+    
+    for nombre in curso['alumnos']:
+        print(nombre)
+
+
+
+
+
+escuela()
