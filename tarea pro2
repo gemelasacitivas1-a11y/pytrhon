@@ -1,0 +1,9 @@
+Precio = input ('Coloca el precio del producto que necesitas')
+Precio = int(Precio)
+Precios = input ('coloca el precio del producto que necesitas ')
+Precios = int (Precios)
+Precio2 = input ('coloca el precio del producto que necesitas ')
+Precio2 = int (Precio2)
+suma = Precio + Precios + Precio2
+
+print (suma)
