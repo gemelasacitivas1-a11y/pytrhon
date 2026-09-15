@@ -1,0 +1,21 @@
+
+super = ['agua 1$','azucar 3$','leche 4$']
+for x in super : 
+    print(x)
+    
+super = {}
+
+super ['productos'] = []
+
+def precio():
+       while True:
+        producto = input('ingrasa el producto o fin para acabar la lista:')
+        if producto =='fin'or producto == 'FIN':
+            print('lista de los productos ')
+            super['productos'].append(producto)
+            
+for producto in super['productos']:
+        print(producto)
+    
+
+precio()
