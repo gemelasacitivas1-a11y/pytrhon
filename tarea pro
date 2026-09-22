@@ -39,6 +39,61 @@ def agregar_productos():
     
     for precio in P_inventario['precios']:
         print(precio)
+
+inventario = { }
+
+P_inventario = {}
+
+inventario ['productos'] = []
+P_inventario ['precios'] = []
+
+Articulo =[
+    {'id': 0, 'nombre':'leche','precio': 10},
+    {'id': 1,'nombre':'huevo','precio': 5},
+    {'id': 2,'nombre':'pollo','precio': 20},
+    {'id': 3,'nombre':'carne','precio': 25},
+    {'id': 4,'nombre':'queso','precio': 7},
+    {'id': 5,'nombre':'caraota','precio': 5},
+    {'id': 6,'nombre':'pescado','precio': 20},
+    {'id': 7,'nombre':'refresco','precio': 10},
+    {'id': 8,'nombre':'agua','precio': 3},
+    {'id': 9,'nombre':'manzana','precio': 5},
+    {'id': 10,'nombre':'pera','precio': 7},
+    {'id': 11,'nombre':'cambur','precio': 10},
+    {'id': 12,'nombre':'platano','precio': 5}
+]
+-------------------------------------------------------------------------
+def agregar_productos():
+    while True:
+        producto = input('ingrasa el producto o fin para acabar la lista:')
+        if producto =='fin'or producto == 'FIN':
+            break
+    for articulo_actual in Articulo :
+        if producto.isdigit() and articulo_actual['id'] == int(producto):
+            inventario.append(articulo_actual['nombre'])
+  
+    precio= float(input('ingresa el precio del producto'))
+                
+    P_inventario['precios'].append(precio)
+        
+    print('inventario completo:')
+    
+
+    print(inventario)
+        
+    print('Precios de los prodcutos:')
+    
+    for precio in P_inventario['precios']:
+        print(precio)
+        
+    print('Precio final:')
+    total = sum(P_inventario['precios'])
+    print(total)
+agregar_productos()
+
+
+
+
         
     print('Precio final:')
     total = sum(P_inventario['precios'])
