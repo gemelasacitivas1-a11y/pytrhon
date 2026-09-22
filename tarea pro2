@@ -1,9 +1,16 @@
-Precio = input ('Coloca el precio del producto que necesitas')
-Precio = int(Precio)
-Precios = input ('coloca el precio del producto que necesitas ')
-Precios = int (Precios)
-Precio2 = input ('coloca el precio del producto que necesitas ')
-Precio2 = int (Precio2)
-suma = Precio + Precios + Precio2
+Notas = []
+def Promedio_estudiante ():
+    Nombre = input('ingrese el nombre del estudiante')
+    x = float(input('Cuantas materias Cursa el estudiante?'))
+    while True:
+        materia = input('ingrese el nombre de la materia o sumar para ver el promedio:')
+        if materia =='sumar':
+            break
+        notas = float(input('escribe la nota de la materia '))
+        Notas.append(notas)
+        
+    print(f'el promedio final de  {Nombre} es:')
+    total = sum(Notas)
+    print(total//x)
 
-print (suma)
+Promedio_estudiante()
