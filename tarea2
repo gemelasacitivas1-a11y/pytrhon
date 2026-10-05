@@ -1,0 +1,57 @@
+class Libro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.ocupado = False
+
+class Usuario:
+    def __init__(self, nombre, apellido):
+        self.nombre = nombre
+        self.apellido = apellido
+
+    def __str__(self):
+        return f"{self.nombre} {self.apellido}"
+
+
+lista_libros = [
+    ("Cien años de soledad", "Gabriel García Márquez"),
+    ("Don Quijote de la Mancha", "Miguel de Cervantes"),
+    ("El principito", "Antoine de Saint-Exupéry"),
+    ("1984", "George Orwell")
+]
+
+lista_usuarios = []
+
+
+
+def registrar_usuario():
+    print("\n--- REGISTRO DE NUEVO USUARIO ---")
+    nombre = input("Por favor, ingresa tu nombre: ")
+    apellido = input("Por favor, ingresa tu apellido: ")
+    nuevo_usuario = Usuario(nombre, apellido)
+    lista_usuarios.append(nuevo_usuario)
+    print(f"¡Bienvenido, {nuevo_usuario}! Has sido registrado con éxito.")
+    return nuevo_usuario
+
+def apartar_libro(titulo_buscando):
+    encontrado = False
+    for libro in lista_libros:
+        if libro.titulo.lower() == titulo_buscando.lower():
+            encontrado = True
+            libro.ocupado = True
+            print(f"\n¡Éxito! El libro '{libro.titulo}' ha sido apartado correctamente.")
+            break
+    if not encontrado:
+        print("\nNo se encontró ningún libro con ese título en el catálogo.")
+
+
+
+usuario_actual = registrar_usuario()
+
+print("\n--- CATÁLOGO DE LIBROS DISPONIBLES ---")
+
+print("\n Cien años de soledad, Gabriel García Márquez")
+
+titulo_ingresado = input("\nEscribe el título exacto del libro que deseas apartar: ")
+
+apartar_libro(titulo_ingresado)
