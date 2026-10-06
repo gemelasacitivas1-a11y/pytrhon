@@ -79,3 +79,89 @@ monto_total()
     total = sum(P_inventario['precios'])
     print(total)
 agregar_productos()
+
+
+
+catalogo = [
+    {'id': 0, 'nombre': 'leche', 'precio': 10},
+    {'id': 1, 'nombre': 'huevo', 'precio': 5},
+    {'id': 2, 'nombre': 'pollo', 'precio': 20},
+    {'id': 3, 'nombre': 'carne', 'precio': 25},
+    {'id': 4, 'nombre': 'queso', 'precio': 7},
+    {'id': 5, 'nombre': 'caraota', 'precio': 5},
+    {'id': 6, 'nombre': 'pescado', 'precio': 20},
+    {'id': 7, 'nombre': 'refresco', 'precio': 10},
+    {'id': 8, 'nombre': 'agua', 'precio': 3},
+    {'id': 9, 'nombre': 'manzana', 'precio': 5},
+    {'id': 10, 'nombre': 'pera', 'precio': 7},
+    {'id': 11, 'nombre': 'cambur', 'precio': 10},
+    {'id': 12, 'nombre': 'platano', 'precio': 5}
+]
+
+inventario = {'productos': []}
+P_inventario = {'precios': []}
+
+print("\nCATALOGO ")
+print(
+    {'id': 0, 'nombre':'leche','precio': 10},
+    {'id': 1,'nombre':'huevo','precio': 5},
+    {'id': 2,'nombre':'pollo','precio': 20},
+    {'id': 3,'nombre':'carne','precio': 25},
+    {'id': 4,'nombre':'queso','precio': 7},
+    {'id': 5,'nombre':'caraota','precio': 5},
+    {'id': 6,'nombre':'pescado','precio': 20},
+    {'id': 7,'nombre':'refresco','precio': 10},
+    {'id': 8,'nombre':'agua','precio': 3},
+    {'id': 9,'nombre':'manzana','precio': 5},
+    {'id': 10,'nombre':'pera','precio': 7},
+    {'id': 11,'nombre':'cambur','precio': 10},
+    {'id': 12,'nombre':'platano','precio': 5}
+    )
+        
+def agregar_productos():
+    while True:
+        producto = input('Ingresa el id del producto (o escribe "fin" para acabar): ')
+
+        if producto == 'fin' or producto == 'FIN':
+            break
+
+        if producto:
+            id_buscando = int(producto)
+            
+            for item in catalogo:
+                if item['id'] == id_buscando:
+                    producto_encontrado = item
+                    break
+            if producto_encontrado:
+                inventario['productos'].append(producto_encontrado['nombre'])
+                print(f"Agregado: {producto_encontrado['nombre']}")
+                
+        for item in catalogo:
+                        if item['id'] == id_buscando:
+                            producto_encontrado = item
+                            break
+                        P_inventario['precios'].append(producto_encontrado['precio'])
+
+        
+        
+def monto_total():
+    producto_encontrado=int(producto_encontrado)
+    iva = sum(producto_encontrado)
+    iva_total = iva * 0.16
+    print(f"total final{iva_total}$")
+
+
+
+agregar_productos()
+      
+print('\ninventario completo')
+for producto in inventario['productos']:
+        print(producto)
+        
+print('\nprecio de los productos')
+for precio in P_inventario['precios']:
+        print(precio)
+
+     
+monto_total()
+
